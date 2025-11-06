@@ -32,3 +32,14 @@ img {
     width: 120px;
     border-radius: 5px;
 }
+.titles{
+    background: #0078d7;
+    color: white;
+}
+
+.chooseLine{
+    background: #12d4ff;
+    font-size: larger;
+    color: darkblue;
+    font-style: bold;
+}
