@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Contact</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Send a Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name:</td>
+          <td><input id="name" name="name" type="text" /></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input id="email" name="email" type="email" /></td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td><input id="phone" name="phone" type="text" /></td>
+        </tr>
+        <tr>
+          <td>Subject:</td>
+          <td><input id="subject" name="subject" type="text" /></td>
+        </tr>
+        <tr>
+          <td>Message:</td>
+          <td><textarea id="message" name="message"></textarea></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><button onclick="showAlert()">Send Message</button></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <script>
+    function showAlert() {
+      alert("Message was send!");
+    }
+  </script>
+</body>
+</html>
