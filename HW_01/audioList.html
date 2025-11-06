@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Audio List</title>
+  <link rel="stylesheet" href="audioList.css">
+</head>
+<body>
+  <h1>Audio List</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Cover</th>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Year</th>
+          <th>Play</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><img class="cover" src="coverImages/Coldplay_-_Viva_la_Vida_or_Death_and_All_His_Friends.png" alt="Viva La Vida cover" /></td>
+          <td>Viva La Vida</td>
+          <td>Coldplay</td>
+          <td>2008</td>
+          <td>
+            <audio controls preload="metadata">
+              <source src="AudioFiles/Coldplay - Viva La Vida (Official Video).mp3" type="audio/mpeg" />
+              הדפדפן שלך אינו תומך בתגית <code>audio</code>.
+            </audio>
+          </td>
+          <td class="download">
+            <a href="AudioFiles/Coldplay - Viva La Vida (Official Video).mp3" download>Download</a>
+          </td>
+        </tr>
+
+        
+        <tr>
+          <td><img class="cover" src="coverImages/Bohemian Rhapsody cover.jpg" alt="Bohemian Rhapsody cover" /></td>
+          <td>Bohemian Rhapsody</td>
+          <td>Queen</td>
+          <td>1975</td>
+          <td>
+            <audio controls preload="metadata">
+              <source src="AudioFiles/Queen – Bohemian Rhapsody (Official Video Remastered).mp3" type="audio/mpeg" />
+            </audio>
+          </td>
+          <td class="download">
+            <a href="AudioFiles/Queen – Bohemian Rhapsody (Official Video Remastered).mp3" download>Download</a>
+          </td>
+        </tr>
+
+        
+        <tr>
+          <td><img class="cover" src="coverImages/hey jude cover.jpg" alt="Hey Jude cover" /></td>
+          <td>Hey Jude</td>
+          <td>The Beatles</td>
+          <td>1968</td>
+          <td>
+            <audio controls preload="metadata">
+              <source src="AudioFiles/The Beatles- Hey Jude (lyrics).mp3" type="audio/mpeg" />
+            </audio>
+          </td>
+          <td class="download">
+            <a href="AudioFiles/The Beatles- Hey Jude (lyrics).mp3" download>Download</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
