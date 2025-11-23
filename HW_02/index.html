@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <button class="btn btn-primary me-2 mb-2" onclick="demoNative()">Native Types</button>
+                <button class="btn btn-primary mb-2" id="btn2">Register Click From Code</button>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Calculator Section -->
+        <div class="calc-section">
+            <!-- Mobile: Stacked vertically (col-12) -->
+            <!-- Tablet: Numbers in one row (col-md-6), Operation and = in separate row (col-md-6) -->
+            <!-- Desktop: All in one row (col-lg-3, col-lg-2, etc.) -->
+            
+            <!-- Mobile/Tablet Layout -->
+            <div class="d-lg-none">
+                <!-- First Number, Operation, Second Number Row (Tablet: all in one row, Mobile: stacked) -->
+                <div class="row mb-3">
+                    <!-- First Number -->
+                    <div class="col-12 col-md-4 mb-3 mb-md-0">
+                        <input id="txt1" type="text" class="form-control" placeholder="First Number">
+                    </div>
+                    <!-- Operation - shown on tablet in same row -->
+                    <div class="col-12 col-md-4 mb-3 mb-md-0 d-none d-md-block">
+                        <select id="operation-tablet" class="form-select">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">×</option>
+                            <option value="/">÷</option>
+                        </select>
+                    </div>
+                    <!-- Second Number - shown on tablet in same row -->
+                    <div class="col-12 col-md-4 d-none d-md-block">
+                        <input id="txt2-tablet" type="text" class="form-control" placeholder="Second Number">
+                    </div>
+                </div>
+                
+                <!-- Operation Row - Mobile only -->
+                <div class="row mb-3 d-md-none">
+                    <div class="col-12">
+                        <select id="operation" class="form-select">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">×</option>
+                            <option value="/">÷</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Second Number Row - Mobile only -->
+                <div class="row mb-3 d-md-none">
+                    <div class="col-12">
+                        <input id="txt2" type="text" class="form-control" placeholder="Second Number">
+                    </div>
+                </div>
+                
+                <!-- Equals Button Row -->
+                <div class="row mb-3">
+                    <div class="col-12 col-md-4 offset-md-4">
+                        <button id="btnCalc" class="btn btn-primary w-100">=</button>
+                    </div>
+                </div>
+                
+                <!-- Result Row: Mobile and Tablet full width -->
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div id="lblRes" class="text-center mb-0"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Layout: All in one row -->
+            <div class="row d-none d-lg-flex mb-3">
+                <div class="col-lg-3">
+                    <input id="txt1-desktop" type="text" class="form-control" placeholder="First Number">
+                </div>
+                <div class="col-lg-2">
+                    <select id="operation-desktop" class="form-select">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">×</option>
+                        <option value="/">÷</option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <input id="txt2-desktop" type="text" class="form-control" placeholder="Second Number">
+                </div>
+                <div class="col-lg-2">
+                    <button id="btnCalc-desktop" class="btn btn-primary w-100">=</button>
+                </div>
+                <div class="col-lg-2">
+                    <div id="lblRes-desktop" class="text-center mb-0"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Logs Section -->
+        <div class="row">
+            <div class="col-12">
+                <h4>Logs:</h4>
+                <textarea id="output" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
